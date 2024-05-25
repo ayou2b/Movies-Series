@@ -23,7 +23,7 @@ function Login(props) {
     try {
       e.preventDefault();
 
-      const response = await axios.post("http://localhost:9000/login", {
+      const response = await axios.post("https://movies-series-3.onrender.com/login", {
         email: email,
         password: password,
       });
