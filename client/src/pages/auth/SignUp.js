@@ -24,7 +24,7 @@ function SignUp() {
     try {
       e.preventDefault();
 
-      await axios.post("http://localhost:9000/signup", {
+      await axios.post("https://movies-series-3.onrender.com/signup", {
         name: name,
         email: email,
         password: password,
