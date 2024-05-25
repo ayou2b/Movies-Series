@@ -18,7 +18,7 @@ function Watchlist() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:9000/userWatchlist",
+          "https://movies-series-3.onrender.com/userWatchlist",
           {
             headers: {
               authorisation: "Bearer " + token,
