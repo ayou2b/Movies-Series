@@ -99,7 +99,7 @@ function Serie_Information() {
   const addToWatchListHandler = async () => {
     if (isLogged) {
       const response = await axios.post(
-        "http://localhost:9000/addSerieToWatchList",
+        "https://movies-series-3.onrender.com/addSerieToWatchList",
         {
           serieName: info.name,
           serieId: info.id,
@@ -128,7 +128,7 @@ function Serie_Information() {
     if (isLogged) {
       try {
         const response = await axios.post(
-          "http://localhost:9000/deleteSerieFromWatchList",
+          "https://movies-series-3.onrender.com/deleteSerieFromWatchList",
           {
             serieId: info.id,
           },
