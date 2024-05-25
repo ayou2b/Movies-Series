@@ -1,0 +1,20 @@
+/* StarRating.css */
+.star-rating {
+  display: inline-flex;
+  align-items: center;
+  font-size: 24px;
+}
+
+.star {
+  cursor: pointer;
+  color: gold; /* Set the default color to gold */
+}
+
+.star.filled {
+  color: gold;
+}
+
+.rating {
+  margin-left: 10px;
+  font-size: 18px;
+}

@@ -1,0 +1,46 @@
+.genre-container {
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-left: 15px;
+  max-width: 150px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.genre {
+  text-decoration: none;
+  color: black;
+  border-bottom: 1px solid black;
+  padding: 6px 12px;
+  width: 100%;
+}
+
+.genre:first-child {
+  border-radius: 10px 10px 0 0;
+}
+
+.genre:last-child {
+  border-radius: 0 0 10px 10px;
+}
+
+.genre.active {
+  background-color: red;
+  color: white;
+}
+
+.genre:last-child {
+  border-bottom: none;
+}
+
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .genre-container {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .genre-container {
+    display: none;
+  }
+}

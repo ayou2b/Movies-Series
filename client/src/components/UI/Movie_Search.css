@@ -1,0 +1,36 @@
+.search {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.my-form {
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: box-shadow 0.3s ease;
+}
+
+.my-form.focused {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.my-form input {
+  border: none;
+  outline: none;
+}
+
+.my-form button {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.my-form .search-icon {
+  color: red;
+  font-size: 16px;
+}

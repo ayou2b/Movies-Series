@@ -1,0 +1,166 @@
+.slider-item {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.movie-card {
+  border-radius: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.movie-card.hero {
+  /* width: 300px;
+  height: 450px; */
+
+  width: 254px;
+  height: 385px;
+}
+
+.movie-information {
+  margin-left: 60px;
+  color: white;
+  z-index: 1;
+  position: relative;
+  max-width: 600px;
+  width: 100%;
+}
+.movie-information h2 {
+  user-select: none;
+}
+
+.movie-information p {
+  margin-top: 15px;
+  user-select: none;
+}
+
+.inormation-btns {
+  margin-top: 20px;
+}
+
+.inormation-btns .watch {
+  background-color: rgb(255, 19, 19);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 40px;
+  margin-right: 15px;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.3s ease;
+}
+
+.inormation-btns .watch:hover {
+  transform: scale(0.9);
+}
+
+.inormation-btns .info {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 10px 20px;
+  border-radius: 40px;
+  margin-right: 15px;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.3s ease;
+}
+
+.inormation-btns .info:hover {
+  transform: scale(0.9);
+}
+
+.hero-container {
+  margin-bottom: 70px;
+  width: 100%;
+}
+
+.hero-container .item {
+  margin: 0;
+}
+
+.movie-card.hero:hover::before {
+  background: none;
+}
+
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .movie-card.hero {
+    display: none;
+  }
+
+  .movie-information {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .inormation-btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .inormation-btns button {
+    width: fit-content;
+  }
+
+  .inormation-btns .watch {
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .movie-card.hero {
+    display: none;
+  }
+
+  .movie-information {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .inormation-btns {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+  }
+
+  .inormation-btns button {
+    width: fit-content;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* .movie-card.hero {
+    width: 200px;
+    height: 300px;
+  } */
+
+  .movie-information {
+    max-width: 400px;
+  }
+}

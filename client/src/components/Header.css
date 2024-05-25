@@ -1,0 +1,158 @@
+nav {
+  width: 100%;
+  height: 10vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 60px;
+}
+
+.bars {
+  display: none;
+}
+
+nav.active {
+  background: rgba(255, 255, 255, 0.68);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.8px);
+  -webkit-backdrop-filter: blur(7.8px);
+  color: black;
+}
+
+nav.active a {
+  color: black;
+}
+
+nav.active li {
+  color: black;
+}
+
+h1 a {
+  text-decoration: none;
+  color: white;
+}
+
+ul li {
+  list-style: none;
+  margin-right: 20px;
+  font-size: 15px;
+  cursor: pointer;
+  /* font-weight: 500; */
+}
+
+ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+}
+
+ul li:last-child {
+  margin: 0;
+}
+
+ul li:hover .underline,
+ul li .underline.active {
+  display: block;
+  background-color: red;
+  transform: scaleX(1);
+}
+
+nav ul li span {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0;
+  font-size: 15px;
+}
+
+.underline {
+  width: 100%;
+  height: 3px;
+  background-color: transparent;
+  border-radius: 4px;
+  transition: all 0.25s ease-out;
+  transform: scaleX(0);
+}
+
+nav .auth {
+  border: 2px solid white;
+  padding: 4px 15px;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: normal;
+
+  transition: all 0.5s ease;
+  color: white;
+}
+
+nav .auth:hover {
+  transform: scale(0.9);
+}
+
+nav.active .auth {
+  border: 2px solid rgb(0, 0, 0);
+}
+
+.auth-co {
+  margin-left: 40px;
+  display: flex;
+}
+
+.auth.logout {
+  margin-left: 40px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  nav {
+    padding: 20px 20px;
+  }
+  nav .normal {
+    display: none;
+  }
+
+  .bars {
+    display: block;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+  }
+
+  nav.active .bars {
+    color: black;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  nav {
+    padding: 20px 20px;
+  }
+  nav .normal {
+    display: none;
+  }
+
+  .bars {
+    display: block;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+  }
+
+  nav.active .bars {
+    color: black;
+  }
+}
