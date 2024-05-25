@@ -78,7 +78,7 @@ function MovieInformation() {
   const addToWatchListHandler = async () => {
     if (isLogged) {
       const response = await axios.post(
-        "http://localhost:9000/addMovieToWatchList",
+        "https://movies-series-3.onrender.com/addMovieToWatchList",
         {
           movieTitle: info.title,
           movieId: info.id,
@@ -106,7 +106,7 @@ function MovieInformation() {
     if (isLogged) {
       try {
         const response = await axios.post(
-          "http://localhost:9000/deleteMovieFromWatchList",
+          "https://movies-series-3.onrender.com/deleteMovieFromWatchList",
           {
             movieId: info.id,
           },
