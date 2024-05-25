@@ -54,13 +54,9 @@ exports.login = async (req, res, next) => {
       return res.status(401).json({ errorMessage: errors.array()[0].msg });
     }
 
-      const token = jwt.sign({ userId: user._id }, process.env.SECRET_KEY, {
-          expiresIn: "1h",
-        });
+  
 
-      if (email === "test@test.com" && password === "test12345") {
-     return res.status(200).json({ message: "user logged in", token: token });
-    }
+     
     
 
     User.findOne({ email: email }).then((user) => {
@@ -72,6 +68,10 @@ exports.login = async (req, res, next) => {
         if (!doPasswordMatch) {
           return res.status(401).json({ errorMessage: "Incorrect Password!" });
         }
+
+            const token = jwt.sign({ userId: user._id }, process.env.SECRET_KEY, {
+          expiresIn: "1h",
+        });
 
         res.status(200).json({ message: "user logged in", token: token });
       });
